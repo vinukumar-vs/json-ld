@@ -1,0 +1,63 @@
+{
+    "@context": {
+      "schema": "https://schema.org/",
+      "framework": {
+        "@id": "dial:framework",
+        "@type": "schema:name",
+        "@container": "@graph"
+      },
+      "board": {
+        "@id": "dial:board",
+        "@type": "schema:name",
+        "@container": "@graph"
+      },
+      "medium": {
+        "@id": "dial:medium",
+        "@type": "schema:name",
+        "@container": "@graph"
+      },
+      "gradeLevel": {
+        "@id": "dial:gradeLevel",
+        "@type": "@id",
+        "@container": "@graph"
+      },
+      "subject": {
+        "@id": "schema:name#subject",
+        "@type": "@id",
+        "@container": "@graph"
+      },
+      "textbook": {
+        "@id": "schema:Book",
+        "@container": "@graph"
+      },
+      "textBookUnit": {
+        "@id": "schema:Chapter",
+        "@container": "@graph"
+      },
+      "certificate": {
+        "@id": "schema:Course",
+        "@type": "@id",
+        "@container": "@graph"
+      }
+    },
+    "@id": "http://example.org/dialcode/1234",
+    "@type": "schema:Code",
+    "@graph": [
+      {
+        "@id": "1",
+        "@type": "certificate",
+        "name": "Course completion"
+      },
+      {
+        "@id": "http://example.org/collection/4728-2345-2343-3455",
+        "@type": "textbook",
+        "identifier": "4728-2345-2343-3455",
+        "name": "Sample textbook"
+      },
+      {
+        "@id": "framework/1",
+        "@type": "framework",
+        "name": "NCF"
+      }
+    ]
+}

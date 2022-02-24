@@ -1,0 +1,41 @@
+// JSON-LD Input
+```json
+{
+    "@context": {
+      "@vocab": "http://example.org/",
+      "contains": {
+        "@type": "@id"
+      },
+      "DIALCode": "schema:Code",
+      "textbook": "schema:Book"
+      
+    },
+    "@graph": [
+       {
+        "@id": "http://example.org/code",
+        "@type": "DIALCode",
+        "identifier": "123245",
+         "name": "Some text",
+        "contains": "http://example.org/dialcode/textbook/1"
+      },
+      {
+        "@id": "http://example.org/dialcode/textbook/1",
+        "@type": "Book",
+        "name": "Textbook name",
+        "identifier": "3453-2343-4535-3467",
+        "contains": "http://example.org/dialcode/textbook/1/chapter/1"
+      },
+      {
+        "@id": "http://example.org/dialcode/textbook/1/chapter/1",
+        "@type": "Chapter",
+        "name": "Chpter 1"
+      }
+    ]
+}
+```
+
+
+// JSNO-LD Frame
+```json
+
+```

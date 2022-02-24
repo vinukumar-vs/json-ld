@@ -1,0 +1,15 @@
+{
+    "@context": {
+      "@vocab": "http://example.org/",
+       "DIALCode": "schema:Code"
+    },
+    "@type": "DIALCode",
+    "contains": {
+      "@type": "Book",
+      "sbName": "",
+      "@requireAll": true,
+       "contains": {
+          "@type": "Chapter"
+        }
+    }
+}

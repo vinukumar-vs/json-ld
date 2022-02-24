@@ -1,0 +1,54 @@
+{
+    "@context": {
+      "schema": "http://schema.org/",
+      "framework": {
+        "@id": "schema:name#framework",
+        "@type": "schema:name"
+      },
+      "board": {
+        "@id": "schema:name#board",
+        "@type": "schema:name"
+      },
+      "medium": {
+        "@id": "schema:name#medium",
+        "@type": "schema:name"
+      },
+      "gradeLevel": {
+        "@id": "schema:name#grade_level",
+        "@type": "@id",
+        "@container": "@list"
+      },
+      "subject": {
+        "@id": "schema:name#subject",
+        "@type": "@id",
+        "@container": "@list"
+      },
+      "textbook": "schema:Book",
+      "textBookUnit": "schema:Chapter",
+      "certificate-test": "schema:Course"
+    },
+    
+    
+    "@id": "http://example.org/dialcode/1234",
+    "@type": "schema:Code",
+    "board": "AP",
+    "framework": "NCF",
+    "medium": "English",
+    "subject": ["Maths", "Social"],
+    "gradeLevel": "Grande 1",
+    "textbook": {
+      "@id": "http://example.org/collection/4728-2345-2343-3455",
+      "identifier": "4728-2345-2343-3455",
+      "name": "Sample textbook"
+    },
+    "textBookUnit": {
+      "name": "Unit name"
+    },
+    "certificate": {
+      "@id": "http://example.org/cert/1",
+      "name": "Course completion"
+    },
+    "course": {
+      "name": "Course name"
+    }
+  }
