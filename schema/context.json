@@ -1,0 +1,11 @@
+{
+    "@context": {
+        "scheme": "http://schema.org",
+        "sb": "http://example.org/",
+        "dialcode": "sb:DIALcode"
+    },
+    "dialcode":{
+        "identifier": "SV83F5",
+        "batchCode": "1334"
+    }
+}

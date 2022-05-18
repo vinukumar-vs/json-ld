@@ -1,0 +1,11 @@
+{
+    "@context": {
+      "@vocab": "http://example.org/",
+      "DIALCode": "schema:Code"
+    },
+    "@id": "http://example.org/code",
+    "@type": "DIALCode",
+    "contains": null,
+    "identifier": "123245",
+    "name": "Some text"
+  }

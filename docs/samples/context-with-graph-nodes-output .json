@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "framework": {
+      "@id": "schema:name#framework",
+      "@type": "schema:name"
+    },
+    "board": {
+      "@id": "schema:name#board",
+      "@type": "schema:name"
+    },
+    "medium": {
+      "@id": "schema:name#medium",
+      "@type": "schema:name"
+    },
+    "gradeLevel": {
+      "@id": "schema:name#grade_level",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "subject": {
+      "@id": "schema:name#subject",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "textbook": "schema:Book",
+    "textBookUnit": "schema:Chapter",
+    "certificate-test": "schema:Course"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/dialcode/1234",
+      "@type": "schema:Code",
+      "textbook": {
+        "@id": "http://example.org/collection/4728-2345-2343-3455"
+      },
+      "textBookUnit": {
+        "@id": "_:b0"
+      },
+      "board": "AP",
+      "framework": "NCF",
+      "gradeLevel": [
+        "Grande 1"
+      ],
+      "medium": "English",
+      "subject": [
+        "Maths",
+        "Social"
+      ]
+    }
+  ]
+}
