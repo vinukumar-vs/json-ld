@@ -57,10 +57,6 @@
                 "@value": "2022-05-18"
             },
             "owl:versionInfo": "1.0",
-            "vann:preferredNamespacePrefix": "sb",
-            "vann:preferredNamespaceUri": {
-                "@id": "sb:"
-            },
             "voaf:extends": {
                 "@id": "schema:"
             },
@@ -72,7 +68,7 @@
             }
         },
         {
-            "@id": "sb:DIALcode",
+            "@id": "DIALcode",
             "@type": "rdfs:Class",
             "rdfs:comment": "The DIAL code for phygital discovery.",
             "rdfs:label": "DIALcode",
@@ -81,15 +77,15 @@
             }
         },
         {
-            "@id": "sb:batchCode",
+            "@id": "batchCode",
             "@type": "rdf:Property",
             "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
             "rdfs:label": "batchCode",
             "schema:domainIncludes": {
-                "@id": "sb:DIALcode"
+                "@id": "DIALcode"
             },
             "schema:rangeIncludes": {
-                "@id": "sb:DIALcode"
+                "@id": "DIALcode"
             }
         }
     ]
