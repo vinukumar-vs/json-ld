@@ -68,7 +68,7 @@
             }
         },
         {
-            "@id": "DIALcode",
+            "@id": "sb:DIALcode",
             "@type": "rdfs:Class",
             "rdfs:comment": "The DIAL code for phygital discovery.",
             "rdfs:label": "DIALcode",
@@ -77,24 +77,24 @@
             }
         },
         {
-            "@id": "status",
+            "@id": "sb:status",
             "@type": "rdf:Property",
             "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
             "rdfs:label": "status",
             "schema:domainIncludes": {
-                "@id": "DIALcode"
+                "@id": "sb:DIALcode"
             },
             "schema:rangeIncludes": {
                 "@id": "schema:Text"
             }
         },
         {
-            "@id": "batchCode",
+            "@id": "sb:batchCode",
             "@type": "rdf:Property",
             "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
             "rdfs:label": "batchCode",
             "schema:domainIncludes": {
-                "@id": "DIALcode"
+                "@id": "sb:DIALcode"
             },
             "schema:rangeIncludes": {
                 "@id": "schema:Text"
