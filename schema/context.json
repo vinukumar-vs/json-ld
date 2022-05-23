@@ -1,11 +1,15 @@
 {
-    "@context": {
-        "scheme": "http://schema.org",
-        "sb": "http://example.org/",
-        "dialcode": "sb:DIALcode"
-    },
-    "dialcode":{
-        "identifier": "SV83F5",
-        "batchCode": "1334"
-    }
+  "@context": {
+    "scheme": "http://schema.org",
+    "sb": "https://raw.githubusercontent.com/vinukumar-vs/json-ld/master/schema/schema.jsonld",
+    "batchCode": "sb:batchCode",
+    "dialcode": "sb:DIALcode"
+  },
+  "dialcode": {
+    "@id":"https://sunbird.org/DIAL/SV83F5",
+      "@type": "sb:DIALcode",
+      "sb:identifier": "SV83F5",
+      "batchCode": "1334",
+      "sb:name":  "xyz"
+  }
 }
