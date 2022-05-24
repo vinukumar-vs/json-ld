@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "scheme": "http://schema.org",
+        "sb": "https://raw.githubusercontent.com/vinukumar-vs/json-ld/dial/schema/schema.jsonld",
+        "diksha": "https://raw.githubusercontent.com/vinukumar-vs/json-ld/dial/schema/diksha/schema.jsonld",
+        "framework": "diksha:Framework",
+
+        "identifier": "sb:identifier",
+        "name": "schema:name",
+        "board": "diksha:board",
+        "medium": "diksha:medium",
+        "gradeLevel": "diksha:bogradeLevelard",
+        "subject": "diksha:subject"
+    },
+    "dialcode": {
+      "@id":"https://sunbird.org/DIAL/SV83F5",
+        "@type": "sb:DIALcode",
+        "identifier": "SV83F5",
+        "name":  "xyz"
+    }
+  }
