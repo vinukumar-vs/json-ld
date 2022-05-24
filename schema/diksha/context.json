@@ -1,10 +1,25 @@
 {
     "@context": {
         "scheme": "http://schema.org",
-        "sb": "https://raw.githubusercontent.com/vinukumar-vs/json-ld/dial/schema/schema.jsonld",
-        "diksha": "https://raw.githubusercontent.com/vinukumar-vs/json-ld/dial/schema/diksha/schema.jsonld",
-        "framework": "diksha:Framework",
-
+        "sb": "https://raw.githubusercontent.com/vinukumar-vs/json-ld/dial/schema/schema.jsonld#",
+        "diksha": "https://raw.githubusercontent.com/vinukumar-vs/json-ld/dial/schema/diksha/schema.jsonld#",
+      	"dialcode": {
+          "@id": "sb:DIALcode#DIAL",
+          "@type": "sb:DIALcode"
+        },
+        "context": {
+          "@id": "sb:DIALContext#Textbook",
+          "@type": "sb:DIALContext"
+        },
+        "hasPart": {
+          "@id": "sb:hasPart#TextbookUnit",
+          "@type": "sb:hasPart"
+        },
+      	"attachedTo": {
+          "@id": "diksha:Framework#framework",
+          "@type": "diksha:Framework"
+        },
+			
         "identifier": "sb:identifier",
         "name": "schema:name",
         "board": "diksha:board",
@@ -12,10 +27,30 @@
         "gradeLevel": "diksha:bogradeLevelard",
         "subject": "diksha:subject"
     },
-    "dialcode": {
-      "@id":"https://sunbird.org/DIAL/SV83F5",
-        "@type": "sb:DIALcode",
-        "identifier": "SV83F5",
-        "name":  "xyz"
-    }
+   "dialcode": {
+      "@id": "https://sunbird.org/DIAL/SV83F5",
+      "@type": "sb:DIALcode",
+      "identifier": "SV83F5",
+      "batchCode": "1334",
+      "name": "xyz",
+      "status": "Live",
+      "context": {
+        "@id": "https://dev.sunbirded.org/testbook/do_1234",
+        "@type": "diksha:TextBook",
+        "identifier": "do_1234",
+        "schema:name": "Textbook Name",
+        "hasPart": {
+          "@id": "https://dev.sunbirded.org/content/do_1234_1",
+          "@type": "diksha:TextBookUnit",
+          "schema:name": "Chapter name"
+        },
+        "attchedTo": {
+          "@type": "diksha:Framework",
+          "diksha:board": "CBSE",
+          "diksha:medium": "English",
+          "diksha:gradeLevel": "Class 1",
+          "diksha:subject": "Maths"
+      	}
+      }
+   	}
   }

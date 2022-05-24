@@ -95,9 +95,6 @@
             },
             "rdfs:domain": [
                 {
-                    "@id": "sb:DIALcode"
-                },
-                {
                     "@id": "sb:DIALcontext"
                 }
             ],
@@ -114,9 +111,6 @@
                 "@id": "schema:hasPart"
             },
             "rdfs:domain": [
-                {
-                    "@id": "sb:DIALcode"
-                },
                 {
                     "@id": "sb:DIALcontext"
                 }
@@ -159,11 +153,16 @@
             "rdfs:subPropertyOf": {
                 "@id": "schema:identifier"
             },
-            "rdfs:domain": {
-                "@id": "sb:DIALcode"
-            },
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcode"
+                },
+                {
+                    "@id": "sb:DIALcontext"
+                }
+            ],
             "rdfs:range": {
-                "@id": "schema:identifier"
+                "@id": "schema:Text"
             }
         },
         {
@@ -171,9 +170,14 @@
             "@type": "rdf:Property",
             "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
             "rdfs:label": "status",
-            "rdfs:domain": {
-                "@id": "sb:DIALcode"
-            },
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcode"
+                },
+                {
+                    "@id": "sb:DIALcontext"
+                }
+            ],
             "rdfs:range": {
                 "@id": "schema:Text"
             }
@@ -191,27 +195,30 @@
             }
         },
         {
-            "@id": "sb:batchCode",
+            "@id": "sb:name",
             "@type": "rdf:Property",
-            "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
-            "rdfs:label": "batchCode",
-            "rdfs:domain": {
-                "@id": "sb:DIALcode"
-            },
+            "rdfs:comment": "Name of the item/entity.",
+            "rdfs:label": "name",
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcode"
+                },
+                {
+                    "@id": "sb:DIALcontext"
+                },
+                {
+                    "@id": "sb:hasPart"
+                },
+                {
+                    "@id": "sb:isPartOf"
+                },
+                {
+                    "@id": "sb:attachedTo"
+                }
+
+            ],
             "rdfs:range": {
                 "@id": "schema:Text"
-            }
-        },
-        {
-            "@id": "sb:DIALcontext",
-            "@type": "rdf:Property",
-            "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
-            "rdfs:label": "batchCode",
-            "rdfs:domain": {
-                "@id": "sb:DIALcode"
-            },
-            "rdfs:range": {
-                "@id": "schema:CreativeWork"
             }
         }
     ]
