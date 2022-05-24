@@ -77,14 +77,104 @@
             }
         },
         {
+            "@id": "sb:DIALcontext",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The context information like Book, Course, Quiz etc to which DIAL code has linked.",
+            "rdfs:label": "DIALcontext",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            }
+        },
+        {
+            "@id": "sb:isPartOf",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter isPartOf some Textbook or Course",
+            "rdfs:label": "isPartOf",
+            "rdfs:subPropertyOf": {
+                "@id": "schema:isPartOf"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcode"
+                },
+                {
+                    "@id": "sb:DIALcontext"
+                }
+            ],
+            "rdfs:range": {
+                "@id": "schema:CreativeWork"
+            }
+        },
+        {
+            "@id": "sb:hasPart",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The item/entity has part of some other item/Entity. Inverse of `IsPartOf`. Ex: Textbook or Course hasPart of Lesson/Chapter whitn it",
+            "rdfs:label": "hasPart",
+            "rdfs:subPropertyOf": {
+                "@id": "schema:hasPart"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcode"
+                },
+                {
+                    "@id": "sb:DIALcontext"
+                }
+            ],
+            "rdfs:range": {
+                "@id": "schema:CreativeWork"
+            }
+        },
+        {
+            "@id": "sb:attachedTo",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The item/entity is linked/attached to some other item/Entity. Ex: Textbook or Course is attached to some other entity/item of type educational framework(CBSE, ICSE etc)",
+            "rdfs:label": "attachedTo",
+            "rdfs:subPropertyOf": {
+                "@id": "schema:CreativeWork"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcode"
+                },
+                {
+                    "@id": "sb:DIALcontext"
+                },
+                {
+                    "@id": "sb:isPartOf"
+                },
+                {
+                    "@id": "sb:hasPart"
+                }
+            ],
+            "rdfs:range": {
+                "@id": "schema:CreativeWork"
+            }
+        },
+        {
+            "@id": "sb:identifier",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Unique ID to represent an Item/Entity.",
+            "rdfs:label": "identifier",
+            "rdfs:subPropertyOf": {
+                "@id": "schema:identifier"
+            },
+            "rdfs:domain": {
+                "@id": "sb:DIALcode"
+            },
+            "rdfs:range": {
+                "@id": "schema:identifier"
+            }
+        },
+        {
             "@id": "sb:status",
             "@type": "rdf:Property",
             "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
             "rdfs:label": "status",
-            "schema:domainIncludes": {
+            "rdfs:domain": {
                 "@id": "sb:DIALcode"
             },
-            "schema:rangeIncludes": {
+            "rdfs:range": {
                 "@id": "schema:Text"
             }
         },
@@ -93,11 +183,35 @@
             "@type": "rdf:Property",
             "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
             "rdfs:label": "batchCode",
-            "schema:domainIncludes": {
+            "rdfs:domain": {
                 "@id": "sb:DIALcode"
             },
-            "schema:rangeIncludes": {
+            "rdfs:range": {
                 "@id": "schema:Text"
+            }
+        },
+        {
+            "@id": "sb:batchCode",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
+            "rdfs:label": "batchCode",
+            "rdfs:domain": {
+                "@id": "sb:DIALcode"
+            },
+            "rdfs:range": {
+                "@id": "schema:Text"
+            }
+        },
+        {
+            "@id": "sb:DIALcontext",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
+            "rdfs:label": "batchCode",
+            "rdfs:domain": {
+                "@id": "sb:DIALcode"
+            },
+            "rdfs:range": {
+                "@id": "schema:CreativeWork"
             }
         }
     ]
