@@ -79,34 +79,26 @@
         {
             "@id": "sb:DIALcontext",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The context information like Book, Course, Quiz etc to which DIAL code has linked.",
+            "rdfs:comment": "The context information to which DIAL code has linked. ex: Content, Book, Course, Quiz etc",
             "rdfs:label": "DIALcontext",
             "rdfs:subClassOf": {
                 "@id": "schema:CreativeWork"
             }
         },
         {
-            "@id": "sb:isPartOf",
-            "@type": "rdf:Property",
-            "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter isPartOf some Textbook or Course",
-            "rdfs:label": "isPartOf",
-            "rdfs:subPropertyOf": {
-                "@id": "schema:isPartOf"
-            },
-            "rdfs:domain": [
-                {
-                    "@id": "sb:DIALcontext"
-                }
-            ],
-            "rdfs:range": {
+            "@id": "sb:AdditionalInfo",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "The additional information about the context item/entity like framework.",
+            "rdfs:label": "AdditionalInfo",
+            "rdfs:subClassOf": {
                 "@id": "schema:CreativeWork"
             }
         },
         {
-            "@id": "sb:hasPart",
+            "@id": "sb:isParentOf",
             "@type": "rdf:Property",
-            "rdfs:comment": "The item/entity has part of some other item/Entity. Inverse of `IsPartOf`. Ex: Textbook or Course hasPart of Lesson/Chapter whitn it",
-            "rdfs:label": "hasPart",
+            "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter isParentOf some Textbook or Course",
+            "rdfs:label": "isParentOf",
             "rdfs:subPropertyOf": {
                 "@id": "schema:hasPart"
             },
@@ -116,16 +108,41 @@
                 }
             ],
             "rdfs:range": {
-                "@id": "schema:CreativeWork"
+                "@id": "sb:DIALcontext"
+            }
+        },
+        {
+            "@id": "sb:isChildOf",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The item/entity has part of some other item/Entity. Inverse of `IsPartOf`. Ex: Textbook or Course isChildOf of Lesson/Chapter whitn it",
+            "rdfs:label": "isChildOf",
+            "rdfs:subPropertyOf": {
+                "@id": "schema:isPartOf"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcontext"
+                }
+            ],
+            "rdfs:range": {
+                "@id": "sb:DIALcontext"
             }
         },
         {
             "@id": "sb:attachedTo",
-            "@type": "rdfs:Class",
+            "@type": "rdf:Property",
             "rdfs:comment": "The item/entity is linked/attached to some other item/Entity. Ex: Textbook or Course is attached to some other entity/item of type educational framework(CBSE, ICSE etc)",
             "rdfs:label": "attachedTo",
-            "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
+            "rdfs:subPropertyOf": {
+                "@id": "schema:mainEntity"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcontext"
+                }
+            ],
+            "rdfs:range": {
+                "@id": "sb:AdditionalInfo"
             }
         },
         {
@@ -142,6 +159,9 @@
                 },
                 {
                     "@id": "sb:DIALcontext"
+                },
+                {
+                    "@id": "sb:AdditionalInfo"
                 }
             ],
             "rdfs:range": {
@@ -159,20 +179,11 @@
                 },
                 {
                     "@id": "sb:DIALcontext"
+                },
+                {
+                    "@id": "sb:AdditionalInfo"
                 }
             ],
-            "rdfs:range": {
-                "@id": "schema:Text"
-            }
-        },
-        {
-            "@id": "sb:batchCode",
-            "@type": "rdf:Property",
-            "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
-            "rdfs:label": "batchCode",
-            "rdfs:domain": {
-                "@id": "sb:DIALcode"
-            },
             "rdfs:range": {
                 "@id": "schema:Text"
             }
@@ -190,16 +201,22 @@
                     "@id": "sb:DIALcontext"
                 },
                 {
-                    "@id": "sb:hasPart"
-                },
-                {
-                    "@id": "sb:isPartOf"
-                },
-                {
-                    "@id": "sb:attachedTo"
+                    "@id": "sb:AdditionalInfo"
                 }
 
             ],
+            "rdfs:range": {
+                "@id": "schema:Text"
+            }
+        },
+        {
+            "@id": "sb:batchCode",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The publisher batch code to indentify the dial print batch.",
+            "rdfs:label": "batchCode",
+            "rdfs:domain": {
+                "@id": "sb:DIALcode"
+            },
             "rdfs:range": {
                 "@id": "schema:Text"
             }

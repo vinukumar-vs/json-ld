@@ -91,7 +91,7 @@
             "rdfs:comment": "Diksha framework defined to attach the contents or collections.",
             "rdfs:label": "Framework",
             "rdfs:subClassOf": {
-                "@id": "sb:attachedTo"
+                "@id": "sb:AdditionalInfo"
             }
         },
         {
@@ -103,7 +103,7 @@
                 "@id": "diksha:Framework"
             },
             "rdfs:range": {
-                "@id": "schema:name"
+                "@id": "sb:name"
             }
         },
         {
@@ -115,7 +115,7 @@
                 "@id": "diksha:Framework"
             },
             "rdfs:range": {
-                "@id": "schema:name"
+                "@id": "sb:name"
             }
         },
         {
@@ -127,7 +127,7 @@
                 "@id": "diksha:Framework"
             },
             "rdfs:range": {
-                "@id": "schema:name"
+                "@id": "sb:name"
             }
         },
         {
@@ -139,7 +139,7 @@
                 "@id": "diksha:Framework"
             },
             "rdfs:range": {
-                "@id": "schema:name"
+                "@id": "sb:name"
             }
         }
     ]
