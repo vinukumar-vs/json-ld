@@ -73,7 +73,7 @@
             "rdfs:comment": "Digital TextBook contents of Diksha",
             "rdfs:label": "Textbook",
             "rdfs:subClassOf": {
-                "@id": "sb:DIALcontext"
+                "@id": "sb:Collection"
             }
         },
         {
@@ -82,7 +82,7 @@
             "rdfs:comment": "Digital TextBook unit/lesson of the Textbook",
             "rdfs:label": "TextbookUnit",
             "rdfs:subClassOf": {
-                "@id": "sb:DIALcontext"
+                "@id": "sb:Content"
             }
         },
         {
