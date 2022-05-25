@@ -121,27 +121,10 @@
         },
         {
             "@id": "sb:attachedTo",
-            "@type": "rdf:Property",
+            "@type": "rdfs:Class",
             "rdfs:comment": "The item/entity is linked/attached to some other item/Entity. Ex: Textbook or Course is attached to some other entity/item of type educational framework(CBSE, ICSE etc)",
             "rdfs:label": "attachedTo",
-            "rdfs:subPropertyOf": {
-                "@id": "schema:CreativeWork"
-            },
-            "rdfs:domain": [
-                {
-                    "@id": "sb:DIALcode"
-                },
-                {
-                    "@id": "sb:DIALcontext"
-                },
-                {
-                    "@id": "sb:isPartOf"
-                },
-                {
-                    "@id": "sb:hasPart"
-                }
-            ],
-            "rdfs:range": {
+            "rdfs:subClassOf": {
                 "@id": "schema:CreativeWork"
             }
         },
