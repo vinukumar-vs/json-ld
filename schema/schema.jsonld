@@ -94,6 +94,23 @@
             }
         },
         {
+            "@id": "sb:context",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter isParentOf some Textbook or Course",
+            "rdfs:label": "context",
+            "rdfs:subPropertyOf": {
+                "@id": "schema:about"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "sb:DIALcode"
+                }
+            ],
+            "rdfs:range": {
+                "@id": "sb:DIALcontext"
+            }
+        },
+        {
             "@id": "sb:isParentOf",
             "@type": "rdf:Property",
             "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter isParentOf some Textbook or Course",

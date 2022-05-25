@@ -77,12 +77,56 @@
             }
         },
         {
+            "@id": "diksha:lastPublishedOn",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Published date of the content.",
+            "rdfs:label": "lastPublishedOn",
+            "rdfs:domain": {
+                "@id": "diksha:TextBook"
+            },
+            "rdfs:range": {
+                "@id": "sb:name"
+            }
+        },
+        {
+            "@id": "diksha:channel",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Channel name to which Content has created.",
+            "rdfs:label": "channel",
+            "rdfs:domain": {
+                "@id": "diksha:TextBook"
+            },
+            "rdfs:range": {
+                "@id": "sb:name"
+            }
+        },
+        {
             "@id": "diksha:TextBookUnit",
             "@type": "rdfs:Class",
             "rdfs:comment": "Digital TextBook unit/lesson of the Textbook",
             "rdfs:label": "TextbookUnit",
             "rdfs:subClassOf": {
-                "@id": "sb:Content"
+                "@id": "sb:Collection"
+            }
+        },
+        {
+            "@id": "diksha:framework",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Unique ID to represent an Item/Entity.",
+            "rdfs:label": "framework",
+            "rdfs:subPropertyOf": {
+                "@id": "sb:attachedTo"
+            },
+            "rdfs:domain": [
+                {
+                    "@id": "diksha:TextBook"
+                },
+                {
+                    "@id": "diksha:Course"
+                }
+            ],
+            "rdfs:range": {
+                "@id": "diksha:Framework"
             }
         },
         {
@@ -92,6 +136,18 @@
             "rdfs:label": "Framework",
             "rdfs:subClassOf": {
                 "@id": "sb:AdditionalInfo"
+            }
+        },
+        {
+            "@id": "diksha:frameworkId",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Educational board name. ex: CBSE, NCERT etc..",
+            "rdfs:label": "framework",
+            "rdfs:domain": {
+                "@id": "diksha:Framework"
+            },
+            "rdfs:range": {
+                "@id": "sb:name"
             }
         },
         {
@@ -110,7 +166,7 @@
             "@id": "diksha:medium",
             "@type": "rdf:Property",
             "rdfs:comment": "Each educational board will be having list of Mediums. This property will refer to the medium of the board. ex: Hindi, English etc..",
-            "rdfs:label": "board",
+            "rdfs:label": "medium",
             "rdfs:domain": {
                 "@id": "diksha:Framework"
             },
