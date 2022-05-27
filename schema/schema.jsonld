@@ -96,7 +96,7 @@
         {
             "@id": "sb:context",
             "@type": "rdf:Property",
-            "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter isParentOf some Textbook or Course",
+            "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter parentInfo some Textbook or Course",
             "rdfs:label": "context",
             "rdfs:subPropertyOf": {
                 "@id": "schema:about"
@@ -111,10 +111,10 @@
             }
         },
         {
-            "@id": "sb:isParentOf",
+            "@id": "sb:parentInfo",
             "@type": "rdf:Property",
-            "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter isParentOf some Textbook or Course",
-            "rdfs:label": "isParentOf",
+            "rdfs:comment": "The item/entity is part of some other item/Entity. Ex: Lesson/Chapter parent information of some Textbook or Course",
+            "rdfs:label": "parentInfo",
             "rdfs:subPropertyOf": {
                 "@id": "schema:hasPart"
             },
@@ -131,10 +131,10 @@
             }
         },
         {
-            "@id": "sb:isChildOf",
+            "@id": "sb:childInfo",
             "@type": "rdf:Property",
-            "rdfs:comment": "The item/entity has part of some other item/Entity. Inverse of `IsPartOf`. Ex: Textbook or Course isChildOf of Lesson/Chapter whitn it",
-            "rdfs:label": "isChildOf",
+            "rdfs:comment": "The item/entity has part of some other item/Entity. Inverse of `IsPartOf`. Ex: Textbook or Course child information of Lesson/Chapter whitn it",
+            "rdfs:label": "childInfo",
             "rdfs:subPropertyOf": {
                 "@id": "schema:isPartOf"
             },
