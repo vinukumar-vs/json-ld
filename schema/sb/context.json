@@ -7,11 +7,11 @@
       "@type": "sb:DIALcode"
     },
     "context": {
-      "@id": "sb:DIALContext#TextbookUnit",
+      "@id": "sb:DIALContext#NodeInfo",
       "@type": "sb:DIALContext"
     },
     "parentInfo": {
-      "@id": "sb:parentInfo#Textbook",
+      "@id": "sb:parentInfo#parentoNodeInfo",
       "@type": "sb:parentInfo"
     },
     "identifier": "sb:identifier",
